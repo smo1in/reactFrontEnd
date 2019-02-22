@@ -14,11 +14,11 @@ const App = () => {
         <nav>
           <div>
             Pod Management
-            <li>
-              <ul>Pod Status</ul>
-              <ul>Pod Provision</ul>
-              <ul>pod Spin_up</ul>
-            </li>
+            <ul>
+              <li>Pod Status</li>
+              <li>Pod Provision</li>
+              <li>pod Spin_up</li>
+            </ul>
           </div> 
           
           <div>
