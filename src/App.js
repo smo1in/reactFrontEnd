@@ -1,28 +1,35 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React  from 'react';
 import './App.css';
 
-class App extends Component {
-  render() {
+
+const App = () => {
+ 
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+    <div className='app-wrapper'>
+        <header>
+          <img src ='https://assets.themuse.com/uploaded/companies/468/small_logo.png?v=52a6f3b08df9d999e57db53805c53dc28ac609638a51afd760ad369b11a82491'/>
         </header>
+          
+        
+        <nav>
+          <div>
+            Pod Management
+            <li>
+              <ul>Pod Status</ul>
+              <ul>Pod Provision</ul>
+              <ul>pod Spin_up</ul>
+            </li>
+          </div> 
+          
+          <div>
+            Instance Status
+          </div> 
+        </nav>
       </div>
-    );
+      
+      );
   }
-}
+
+  
 
 export default App;
