@@ -5,7 +5,7 @@ const Navbar = () =>{
     <div className={classes.list}>
       Pod Management
       <ul>
-        <li>Pod Status</li>
+        <li><a href='/podstatus'>Pod Status</a></li>
         <li>Pod Provision</li>
         <li>pod Spin_up</li>
       </ul>
