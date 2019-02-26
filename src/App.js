@@ -2,7 +2,7 @@ import React  from 'react'
 import './App.css'
 import Header from './components/header/Header'
 import Navbar from './components/navbar/Navbar'
-import Content from './components/content/Content'
+import Podstatus from './components/podstatus/Podstatus'
 import Footer from './components/footer/Footer'
 
 
@@ -12,7 +12,9 @@ const App = () => {
     <div className='app-wrapper'>
       <Header />
       <Navbar />
-      <Content />
+      <div className='app-wrapper-content'>
+        <Podstatus />
+      </div>
       <Footer />
     </div>)
   }

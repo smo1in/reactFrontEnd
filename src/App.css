@@ -16,6 +16,12 @@
 
 .logo img {
   height: 60px;
+ }
+
+.app-wrapper-content{
+  grid-area: cont;
+  background-color:rgba(243, 243, 243, 0.719);
+
 }
 
 
