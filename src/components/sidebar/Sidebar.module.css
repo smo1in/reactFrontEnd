@@ -1,0 +1,23 @@
+ .nav  {
+  grid-area: sidebar;
+  color: #91a6bb;
+  background-color:#607188;
+  padding: 20px;
+  
+}
+
+.list{
+  
+
+}
+
+.list a{
+  color: black;
+  text-decoration: none;
+}
+
+.list a.activeLink{
+  color:white;
+}
+
+

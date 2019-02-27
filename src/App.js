@@ -1,7 +1,7 @@
 import React  from 'react'
 import './App.css'
 import Header from './components/header/Header'
-import Navbar from './components/navbar/Navbar'
+import Sidebar from './components/sidebar/Sidebar'
 import Podstatus from './components/podstatus/Podstatus'
 import Footer from './components/footer/Footer'
 import { BrowserRouter, Route } from "react-router-dom"
@@ -13,7 +13,7 @@ const App = () => {
       <BrowserRouter>
         <div className='app-wrapper'>
           <Header />
-          <Navbar />
+          <Sidebar />
           <div className='app-wrapper-content'>
             <Route path='/podstatus' component={Podstatus} />
           </div>

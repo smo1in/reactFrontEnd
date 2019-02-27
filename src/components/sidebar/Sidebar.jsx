@@ -1,11 +1,12 @@
 import React from 'react'
-import classes from'./Navbar.module.css'
-const Navbar = () =>{
+import classes from'./Sidebar.module.css'
+import {NavLink} from "react-router-dom"
+const Sidebar = () =>{
     return <nav className={classes.nav}>
     <div className={classes.list}>
       Pod Management
       <ul>
-        <li><a href='/podstatus'>Pod Status</a></li>
+        <li><NavLink to="/podstatus" activeClassName={classes.activeLink}>Pod Status</NavLink></li>
         <li>Pod Provision</li>
         <li>pod Spin_up</li>
       </ul>
@@ -18,4 +19,4 @@ const Navbar = () =>{
     </div> 
   </nav>
 }
-export default Navbar
+export default Sidebar
