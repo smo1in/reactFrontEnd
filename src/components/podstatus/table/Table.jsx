@@ -2,9 +2,10 @@ import React from 'react'
 import './Table.css'
 
 
-const Table = () =>{
+const Table = (props) =>{
+  let tableElements=props.data.map(t =><Table podName={t.podName} running={t.running} stopped={t.stopped} overallState={t.overallState} />);
   return <div>
-          Table.jsx
+            {tableElements}
          </div>
 }
 export default Table

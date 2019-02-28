@@ -7,7 +7,8 @@ import Footer from './components/footer/Footer'
 import { BrowserRouter, Route } from "react-router-dom"
 
 
-const App = () => {
+
+const App = (props) => {
  
     return (
       <BrowserRouter>
@@ -15,7 +16,7 @@ const App = () => {
           <Header />
           <Sidebar />
           <div className='app-wrapper-content'>
-            <Route path='/podstatus' render { () => <Podstatus data={props.data} /> }/>
+            <Route path='/podstatus' render = { () => <Podstatus data={props.data} /> }/>
           </div>
           <Footer />
         </div>
