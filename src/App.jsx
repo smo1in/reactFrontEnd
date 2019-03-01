@@ -16,7 +16,7 @@ const App = (props) => {
           <Header />
           <Sidebar />
           <div className='app-wrapper-content'>
-            <Route path='/podstatus' render = { () => <Podstatus data={props.data} /> }/>
+            <Route path='/podstatus' render = { () => <Podstatus data={props.state.podStatus} /> }/>
           </div>
           <Footer />
         </div>

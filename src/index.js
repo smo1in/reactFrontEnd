@@ -2,59 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import state from './redux/state';
 import * as serviceWorker from './serviceWorker';
 
 
- let data = [{
-    "podName": "sym-qa34-qa-chat-glb-1",
-    "running": 1,
-    "stopped": 1,
-    "overallState": "active"
-}, {
-    "podName": "sym-qa3-qa-chat-glb-1",
-    "running": 2,
-    "stopped": 3,
-    "overallState": "inActive"
-}, {
-    "podName": "sym-qa5-qa-chat-glb-1",
-    "running": 1,
-    "stopped": 5,    
-    "overallState": "inActive"
-}, {
-    "podName": "sym-qa7-qa-chat-glb-1",
-    "running": 6,
-    "stopped": 7,
-    "overallState": "active"
-}, {
-    "podName": "sym-qa9-qa-chat-glb-1",
-    "running": 2,
-    "stopped": 9,
-    "overallState": "inActive"
-}, {
-    "podName": "sym-qa11-qa-chat-glb-1",
-    "running": 3,
-    "stopped": 4,
-    "overallState": "active"
-}, {
-    "podName": "sym-qa13-qa-chat-glb-1",
-    "running": 2,
-    "stopped": 3,
-    "overallState": "inActive"
-}, {
-    "podName": "sym-qa34-qa-chat-glb-1",
-    "running": 6,
-    "stopped": 8,
-    "overallState": "active"
-}, {
-    "podName": "sym-qa17-qa-chat-glb-1",
-    "running": 2,
-    "stopped": 3,
-    "overallState": "active"
-}
-]
+ 
 
 
-ReactDOM.render(<App data={data}/>, document.getElementById('root'));
+ReactDOM.render(<App state={state}/>, document.getElementById('root'));
 
 
 serviceWorker.register();
