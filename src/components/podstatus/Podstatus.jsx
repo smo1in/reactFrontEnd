@@ -3,10 +3,11 @@ import "./Podstatus.css";
 import "./table/Table";
 import Table from "./table/Table";
 
-const Podstatus = props => {
+const Podstatus = (props) => {
+  
   return (
     <div>
-      <Table data={props.data} />
+      <Table data={props.podStatusData.tableData} />
     </div>
   );
 };

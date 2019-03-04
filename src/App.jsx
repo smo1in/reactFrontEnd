@@ -14,8 +14,8 @@ const App = props => {
         <Sidebar />
         <div className="app-wrapper-content">
           <Route
-            path="/podstatus"
-            render={() => <Podstatus data={props.state.podStatus.data} />}
+            path='/podstatus'
+            render={ () => <Podstatus podStatusData={props.state.podStatus} />}
           />
         </div>
         <Footer />
