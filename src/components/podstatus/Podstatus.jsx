@@ -1,21 +1,41 @@
 import React from "react";
 import "./Podstatus.css";
-import "./table/Table";
-import Table from "./table/Table";
+import "./table/Table.css";
+import PodStatusTable from "./table/Table";
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+
+
 
 const Podstatus = (props) =>{
 
-  let tableElements=props.podStatusData.tableData.map(t => <Table podName={t.podName} running={t.running} stopped={t.stopped} overallState={t.overallState} />);
+  let tableElements=props.podStatusData.tableData.map(t => <PodStatusTable podName={t.podName} running={t.running} stopped={t.stopped} overallState={t.overallState} />);
 
   return (
     <div>
-      <tr>
-        <th>podName</th>
-        <th>running</th>
-        <th>stopped</th>
-        <th>overallState</th>
-      </tr> 
-      {tableElements}
+      <Table >
+          <TableHead>
+            <TableRow>
+              <TableCell>Pod Name</TableCell>
+              <TableCell align="right">Running</TableCell>
+              <TableCell align="right">Stopped</TableCell>
+              <TableCell align="right">Overall State</TableCell>
+              <TableCell align="right">Start</TableCell>
+              <TableCell align="right">Stop</TableCell>
+              <TableCell align="right">Restart</TableCell>
+              <TableCell align="right">Log</TableCell>
+              <TableCell align="right">Upgrade Pod</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+              
+                {tableElements}
+            
+          </TableBody>
+        </Table>
     </div>
   );
 
