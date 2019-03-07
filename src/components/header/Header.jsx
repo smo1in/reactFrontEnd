@@ -1,6 +1,18 @@
 import React from 'react'
 import './Header.css'
 import {NavLink} from "react-router-dom"
+
+
+let searchElement = React.createRef();
+
+let searchRequest = () =>{
+    debugger;
+    let text = searchElement.current.value;
+    alert(text);
+} 
+
+
+
 const Header = () =>{
     return <div className='header'> 
                     <div>
@@ -14,9 +26,12 @@ const Header = () =>{
                     </div>
 
                     <div className='right-nav'>
-                        <li>search</li>
-                        <li>avatar</li>
-                        <li>something</li>
+                        <div>
+                            <input   ref={searchElement} type="search" placeholder="Search.." name="search"></input>
+                            <button onClick={searchRequest}><i class="material-icons">search</i></button>
+                        </div>
+                        <a href="#">N.do</a>
+                        
                     </div>
             </div>
 }

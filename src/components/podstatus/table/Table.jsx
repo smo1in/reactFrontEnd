@@ -4,7 +4,9 @@ import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Button from '@material-ui/core/Button';
 
-
+let upgradePod =() =>{
+  alert('upgrade');
+}
 
 
 const PodStatusTable = props => {
@@ -18,7 +20,7 @@ const PodStatusTable = props => {
       <TableCell align="right"><i class="material-icons">remove_circle</i></TableCell>
       <TableCell align="right"><i class="material-icons">loop</i></TableCell>
       <TableCell align="right"><a href='#'>Log</a></TableCell>
-      <TableCell align="right"><Button variant="contained" color="primary">Upgrade</Button></TableCell>
+      <TableCell align="right"><Button onClick={upgradePod} variant="contained" color="primary">Upgrade</Button></TableCell>
     </TableRow>
   );
 };
