@@ -6,7 +6,7 @@ import {NavLink} from "react-router-dom"
 let searchElement = React.createRef();
 
 let searchRequest = () =>{
-    debugger;
+    
     let text = searchElement.current.value;
     alert(text);
 } 
