@@ -17,10 +17,10 @@ const Podstatus = (props) =>{
   let newPodElement = React.createRef();
 
   let addTableData = () =>{ 
-    debugger;
+  
     let text = newPodElement.current.value
     props.addTableData(text)
-  
+    newPodElement.current.value= '';
 }
   return (
      <div>
