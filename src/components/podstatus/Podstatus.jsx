@@ -17,6 +17,7 @@ const Podstatus = (props) =>{
   let newPodElement = React.createRef();
 
   let addTableData = () =>{ 
+    debugger;
     let text = newPodElement.current.value
     props.addTableData(text)
   
@@ -46,7 +47,7 @@ const Podstatus = (props) =>{
       
 
         <div>
-          <textarea ref={newPodElement} id='new-pod'></textarea>
+          <textarea ref={newPodElement}></textarea>
         </div>
 
         <div>

@@ -18,8 +18,9 @@ let state = {
 }
 
 export let addTableData = (podNameText) => {
+        debugger;
         let newTableData ={
-                podName: {podNameText},
+                podName: podNameText,
                 running: 1,
                 stopped: 1, 
                 overallState: 'active'

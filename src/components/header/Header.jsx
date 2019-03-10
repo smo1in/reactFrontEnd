@@ -28,9 +28,9 @@ const Header = () =>{
                     <div className='right-nav'>
                         <div>
                             <input   ref={searchElement} type="search" placeholder="Search.." name="search"></input>
-                            <button onClick={searchRequest}><i class="material-icons">search</i></button>
+                            <button onClick={searchRequest}><i className="material-icons">search</i></button>
                         </div>
-                        <a href="#">N.do</a>
+                        <a href="#s">N.do</a>
                         
                     </div>
             </div>
