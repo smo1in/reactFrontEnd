@@ -11,17 +11,21 @@ import TableRow from '@material-ui/core/TableRow';
 
 
 const Podstatus = (props) =>{
-
+ 
   let tableElements=props.podStatusData.tableData.map(t => <PodStatusTable podName={t.podName} running={t.running} stopped={t.stopped} overallState={t.overallState} />);
 
   let newPodElement = React.createRef();
 
   let addTableData = () =>{ 
-  
+    props.addTableData()
+    
+  }
+
+  let onPodChange = () =>{
     let text = newPodElement.current.value
-    props.addTableData(text)
-    newPodElement.current.value= '';
+    props.updateNewPodText(text)
 }
+
   return (
      <div>
         <div>
@@ -47,7 +51,7 @@ const Podstatus = (props) =>{
       
 
         <div>
-          <textarea ref={newPodElement}></textarea>
+          <textarea onChange ={onPodChange} ref={newPodElement} value={props.podStatusData.tableData.newPodElement}  />
         </div>
 
         <div>
@@ -55,7 +59,7 @@ const Podstatus = (props) =>{
         </div>
       </div>
   );
-
+  
 }
 export default Podstatus;
 

@@ -7,7 +7,9 @@ import Footer from "./components/footer/Footer";
 import { BrowserRouter, Route } from "react-router-dom";
 
 const App = props => {
+  
   return (
+    
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
@@ -16,6 +18,7 @@ const App = props => {
           <Route path='/podstatus'
             render={ () => <Podstatus 
               podStatusData={props.state.podStatus} 
+              updateNewPodText={props.updateNewPodText}
               addTableData={props.addTableData}
               />}
           />
