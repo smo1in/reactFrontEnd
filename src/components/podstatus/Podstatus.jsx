@@ -2,13 +2,6 @@ import React from "react";
 import "./Podstatus.css";
 import "./table/Table.css";
 import PodStatusTable from "./table/Table";
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-
-
 
 const Podstatus = (props) =>{
  
@@ -27,37 +20,38 @@ const Podstatus = (props) =>{
 }
 
   return (
-     <div>
-        <div>
-          <Table >
-              <TableHead>
-                <TableRow>
-                  <TableCell>Pod Name</TableCell>
-                  <TableCell align="right">Running</TableCell>
-                  <TableCell align="right">Stopped</TableCell>
-                  <TableCell align="right">Overall State</TableCell>
-                  <TableCell align="right">Start</TableCell>
-                  <TableCell align="right">Stop</TableCell>
-                  <TableCell align="right">Restart</TableCell>
-                  <TableCell align="right">Log</TableCell>
-                  <TableCell align="right">Upgrade Pod</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                    {tableElements}
-              </TableBody>
-            </Table>
-        </div>
-      
+   <div>
+    <table  className="table table-striped table-bordered" styles="width:100%">
+    <thead>
+        <tr>
+            <td>Pod Name</td>
+            <td>Running</td>
+            <td>Stopped</td>
+            <td>Overall State</td>
+            <td>Start</td>
+            <td>Stop</td>
+            <td>Restart</td>
+            <td>Log</td>
+            <td>Upgrade Pod</td>
+        </tr>
+    </thead>
 
-        <div>
-          <textarea onChange ={onPodChange} ref={newPodElement} value={props.podStatusData.tableData.newPodElement}  />
-        </div>
+    <tbody>
+        {tableElements}
+    </tbody>
+        
+    </table>
 
-        <div>
-          <button onClick={addTableData}>newPodName</button>
-        </div>
+      <div>
+        <textarea onChange ={onPodChange} ref={newPodElement} value={props.podStatusData.tableData.newPodElement}  />
       </div>
+
+      <div>
+        <button onClick={addTableData}>newPodName</button>
+      </div>
+
+
+  </div>
   );
   
 }
