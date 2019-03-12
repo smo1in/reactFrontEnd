@@ -21,7 +21,7 @@ const Podstatus = (props) =>{
 
   return (
    <div>
-    <table  className="table table-striped table-bordered" styles="width:100%">
+    <table  className="striped">
     <thead>
         <tr>
             <td>Pod Name</td>
@@ -41,13 +41,16 @@ const Podstatus = (props) =>{
     </tbody>
         
     </table>
+      
+    <div class="row">
+    <div class="input-field col s6">
+      <input onChange ={onPodChange} ref={newPodElement} value={props.podStatusData.tableData.newPodElement}/>
+      <label class="active">podName</label>
+    </div>
+  </div>
 
       <div>
-        <textarea onChange ={onPodChange} ref={newPodElement} value={props.podStatusData.tableData.newPodElement}  />
-      </div>
-
-      <div>
-        <button onClick={addTableData}>newPodName</button>
+        <a className="btn-floating btn-large waves-effect waves-light red" onClick={addTableData}><i class="material-icons">add</i></a>
       </div>
 
 
@@ -57,15 +60,3 @@ const Podstatus = (props) =>{
 }
 export default Podstatus;
 
-
-/*let tableElements=props.podStatusData.tableDatadata.map(t => <Table podName={t.podName} running={t.running} stopped={t.stopped} overallState={t.overallState} />);
-const Podstatus = (props) => {
-  
-  return (
-    <div>
-      <Table data={props.podStatusData.tableData} />
-    </div>
-  );
-};
-export default Podstatus;
-*/

@@ -3,6 +3,7 @@ import classes from "./Sidebar.module.css";
 import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   return (
+    
     <nav className={classes.nav}>
       <div className={classes.list}>
         Pod Management
@@ -23,6 +24,7 @@ const Sidebar = () => {
         </ul>
       </div>
     </nav>
+    
   );
 };
 export default Sidebar;

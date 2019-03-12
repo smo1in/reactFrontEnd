@@ -16,7 +16,7 @@ let searchRequest = () =>{
 const Header = () =>{
     return <div className='header'> 
                     <div>
-                    <li><h3>SYMPHONY</h3></li>
+                    <li><h5>SYMPHONY</h5></li>
                     </div>
                     <div className="left-nav">
                         
@@ -27,8 +27,8 @@ const Header = () =>{
 
                     <div className='right-nav'>
                         <div>
-                            <input   ref={searchElement} type="search" placeholder="Search.." name="search"></input>
-                            <button onClick={searchRequest}><i className="material-icons">search</i></button>
+                        <li><input ref={searchElement} type="search" placeholder="Search.." name="search"></input></li>
+                        <li><button onClick={searchRequest}><i className="material-icons">search</i></button></li>
                         </div>
                         <a href="#s">N.do</a>
                         
