@@ -2,16 +2,28 @@
   display: grid;
   grid-template-areas: 
   "header header "
+<<<<<<< HEAD
+  "sidebar content"
+=======
   "sidebar cont"
+>>>>>>> origin/master
   "footer footer";
   
 
 
+<<<<<<< HEAD
+  grid-template-rows:auto auto auto;
+=======
   grid-template-rows: 50px 1fr 20px;
+>>>>>>> origin/master
   grid-template-columns: 2fr 10fr;
   grid-gap: 1px;
 }
 
+<<<<<<< HEAD
+.app-wrapper-content{
+  grid-area: content;
+=======
 
 
 .logo img {
@@ -22,10 +34,14 @@
   grid-area: cont;
   background-color:#6071887c
 ;
+>>>>>>> origin/master
 
 }
 
 
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/master

@@ -19,7 +19,11 @@ const PodStatusTable = props => {
       <td><i className="material-icons">remove_circle</i></td>
       <td><i className="material-icons">loop</i></td>
       <td><a href='#s'>Log</a></td>
+<<<<<<< HEAD
+      <td><a className="btn waves-effect waves-light teal lighten-2" onClick={upgradePod}>Upgrade</a></td>
+=======
       <td><a class="waves-effect waves-light btn" onClick={upgradePod}>Upgrade</a></td>
+>>>>>>> origin/master
     </tr>
   );
 };
