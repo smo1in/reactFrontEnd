@@ -20,7 +20,7 @@ const Podstatus = (props) =>{
 }
 
   return (
-  <div>
+  <div class="card horizontal">
       <table  className="striped">
         
         <thead>
@@ -54,9 +54,13 @@ const Podstatus = (props) =>{
           </div>
 
         <div className="dataTables-filter">
-          <label>
-            <input type="search" class="" placeholder="Enter search term" aria-controls="default-table-example"/>
-          </label>
+    
+            <div class="input-field">
+              <input id="search" type="search" required/>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          
           <ul class="pagination">
             <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
             <li class="active teal lighten-2"><a href="#!">1</a></li>

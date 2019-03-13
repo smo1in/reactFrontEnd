@@ -2,5 +2,8 @@
 grid-area: sidebar;
 }
 
+.sidebar-nav {
+    padding: 10px;
+}
 
 

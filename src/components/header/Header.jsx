@@ -34,7 +34,7 @@ const Header = () =>{
                         <ul className="right hide-on-med-and-down ">
                         <li><input ref={searchElement} type="search" placeholder="Search.." name="search"></input></li>
                         <li><a onClick={searchRequest}><i className="material-icons">search</i></a></li>
-                        <li><img className="circle responsive-img" src="https://materializecss.com/images/yuna.jpg" alt="" /></li>
+                        <li><img className="circle" src="https://materializecss.com/images/yuna.jpg" alt="" /></li>
                         <li><a className="dropdown-trigger" href="#!" data-target="dropdown1">N.do<i className="material-icons right">arrow_drop_down</i></a></li>
                         </ul>
                     </div>
