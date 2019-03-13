@@ -2,7 +2,6 @@ import React from 'react'
 import './Footer.css'
 const Footer = () =>{
 
-<<<<<<< HEAD
     return (
       <footer className="page-footer teal lighten-2">
           <div className="container">
@@ -30,11 +29,6 @@ const Footer = () =>{
           </div>
         </footer>
     )
-=======
-    return <footer className='footer'> 
-              2019
-            </footer>
->>>>>>> origin/master
 
 }
 

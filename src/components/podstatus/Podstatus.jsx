@@ -20,7 +20,6 @@ const Podstatus = (props) =>{
 }
 
   return (
-<<<<<<< HEAD
   <div>
       <table  className="striped">
         
@@ -76,44 +75,6 @@ const Podstatus = (props) =>{
 
   
   )
-=======
-   <div>
-    <table  className="striped">
-    <thead>
-        <tr>
-            <td>Pod Name</td>
-            <td>Running</td>
-            <td>Stopped</td>
-            <td>Overall State</td>
-            <td>Start</td>
-            <td>Stop</td>
-            <td>Restart</td>
-            <td>Log</td>
-            <td>Upgrade Pod</td>
-        </tr>
-    </thead>
-
-    <tbody>
-        {tableElements}
-    </tbody>
-        
-    </table>
-      
-    <div class="row">
-    <div class="input-field col s6">
-      <input onChange ={onPodChange} ref={newPodElement} value={props.podStatusData.tableData.newPodElement}/>
-      <label class="active">podName</label>
-    </div>
-  </div>
-
-      <div>
-        <a className="btn-floating btn-large waves-effect waves-light red" onClick={addTableData}><i class="material-icons">add</i></a>
-      </div>
-
-
-  </div>
-  );
->>>>>>> origin/master
   
 }
 export default Podstatus;

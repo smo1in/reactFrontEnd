@@ -12,13 +12,8 @@ const App = props => {
     
     <BrowserRouter>
       <div className="app-wrapper">
-<<<<<<< HEAD
         <div className="header" ><Header /></div>
         <div className="sidebar-nav" ><Sidebar /></div>
-=======
-        <Header />
-        <Sidebar />
->>>>>>> origin/master
         <div className="app-wrapper-content">
           <Route path='/podstatus'
             render={ () => <Podstatus 
