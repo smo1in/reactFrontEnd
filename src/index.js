@@ -3,21 +3,20 @@ import {BrowserRouter} from "react-router-dom"
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
-import state, {subscribe} from './redux/state'
-import {addTableData, updateNewPodText} from './redux/state'
+import store from './redux/store'
 import * as serviceWorker from './serviceWorker'
-
+ 
 let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <BrowserRouter>
-            <App state={state} addTableData={addTableData} updateNewPodText={updateNewPodText}/>
+            <App state={state} addTableData={store.addTableData.bind(store)} updateNewPodText={store.updateNewPodText.bind(store)}/>
         </BrowserRouter>, document.getElementById('root')
     )
     
 } 
 
-rerenderEntireTree(state)
+rerenderEntireTree(store.getState())
  
-subscribe(rerenderEntireTree)
+store.subscribe(rerenderEntireTree)
 
 serviceWorker.register()
