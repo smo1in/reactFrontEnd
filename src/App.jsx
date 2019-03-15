@@ -16,11 +16,7 @@ const App = props => {
         <div className="sidebar-nav" ><Sidebar /></div>
         <div className="app-wrapper-content">
           <Route path='/podstatus'
-            render={ () => <Podstatus 
-              podStatusData={props.state.podStatus} 
-              updateNewPodText={props.updateNewPodText}
-              addTableData={props.addTableData}
-              />}
+            render={ () => <Podstatus podStatusData={props.state.podStatus} dispatch={props.dispatch}/>}
           />
         </div>
         <Footer />

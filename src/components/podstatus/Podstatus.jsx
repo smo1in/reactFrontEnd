@@ -2,6 +2,12 @@ import React from "react";
 import "./Podstatus.css";
 import "./table/Table.css";
 import PodStatusTable from "./table/Table";
+import {addTableDataActionCreator , updateNewPodTextActionCreator} from "../../redux/store"
+
+
+
+
+
 
 const Podstatus = (props) =>{
  
@@ -10,13 +16,14 @@ const Podstatus = (props) =>{
   let newPodElement = React.createRef();
 
   let addTableData = () =>{ 
-    props.addTableData()
+    props.dispatch(addTableDataActionCreator ())
     
   }
 
   let onPodChange = () =>{
     let text = newPodElement.current.value
-    props.updateNewPodText(text)
+    let action = updateNewPodTextActionCreator(text)
+    props.dispatch(action)
 }
 
   return (

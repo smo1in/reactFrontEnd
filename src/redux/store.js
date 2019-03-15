@@ -21,39 +21,56 @@ let store={
 
         
         },
-       
-        getState(){
-                return this._state;
-        },
-
-         _callSubscriber(){
-        console.log('state has changed')
-        },
-
         
-
-        addTableData(){
-        
-                let newTableData ={
-                        podName: this._state.podStatus.newPodText,
-                        running: 1,
-                        stopped: 1, 
-                        overallState: 'active'
-
-                }
-        this._state.podStatus.tableData.push(newTableData)
-        this._state.podStatus.newPodText=''
-        this._callSubscriber(this._state)
-        },
-
-        updateNewPodText(newText){       
-        this._state.podStatus.newPodText = newText
-        this._callSubscriber(this._state)
+        _callSubscriber(){
+                console.log('state has changed')
         },
 
         subscribe(observer){
                 this._callSubscriber = observer
         },
+
+         getState(){
+                return this._state;
+        },
+       
+        updateNewPodText(newText){       
+        this._state.podStatus.newPodText = newText
+        this._callSubscriber(this._state)
+        },
+
+        dispatch(action){
+                if(action.type === 'ADD-TABLE-DATA'){
+                let newTableData ={
+                        podName: this._state.podStatus.newPodText,
+                        running: 1,
+                        stopped: 1, 
+                        overallState: 'active'}
+
+                        this._state.podStatus.tableData.push(newTableData)
+                        this._state.podStatus.newPodText=''
+                        this._callSubscriber(this._state)
+                }else if (action.type === 'UPDATE-NEW-POD-TEXT'){       
+                        this._state.podStatus.newPodText = action.newText
+                        this._callSubscriber(this._state)
+                        }
+
+        },    
+}
+
+        export const addTableDataActionCreator = () =>{
+                return{
+                type: 'ADD-TABLE-DATA'
+                }
+        }
+
+        export const updateNewPodTextActionCreator = (text) =>{
+                return{
+                type: 'UPDATE-NEW-POD-TEXT',  newText:text 
+                }
+        
+       
+        
         
 }
 window.store=store
