@@ -51,7 +51,7 @@ const Podstatus = (props) =>{
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s6">
-                  <textarea id="icon_prefix2" class="materialize-textarea" onChange ={onPodChange} ref={newPodElement} value={props.podStatusData.newPodElement}></textarea>
+                  <textarea id="icon_prefix2" class="materialize-textarea" onChange ={onPodChange} ref={newPodElement} value={props.podStatusData.newPodText}></textarea>
                   <label for="icon_prefix2">new PodName</label>
                   <a class="btn-floating pulse teal lighten-2" onClick={addTableData}><i className="material-icons">add</i></a>
                 </div>
