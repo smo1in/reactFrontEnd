@@ -1,3 +1,4 @@
+import podStatusReducer from "./podStatusReducer"
 let store={
 
         _state: {
@@ -13,7 +14,7 @@ let store={
                                 {podName: 'sym-qa34-qa-chat-glb-1', running: 6, stopped: 8,  overallState: 'active'},
                                 {podName: 'sym-qa17-qa-chat-glb-1', running: 2, stopped: 3,  overallState: 'active'}
                         ],
-                        newPodText: 'text'
+                        newPodText: ''
 
                 
         
@@ -40,38 +41,14 @@ let store={
         },
 
         dispatch(action){
-                if(action.type === 'ADD-TABLE-DATA'){
-                let newTableData ={
-                        podName: this._state.podStatus.newPodText,
-                        running: 1,
-                        stopped: 1, 
-                        overallState: 'active'}
 
-                        this._state.podStatus.tableData.push(newTableData)
-                        this._state.podStatus.newPodText=''
-                        this._callSubscriber(this._state)
-                }else if (action.type === 'UPDATE-NEW-POD-TEXT'){       
-                        this._state.podStatus.newPodText = action.newText
-                        this._callSubscriber(this._state)
-                        }
+                this._state.podStatus = podStatusReducer(this._state.podStatus,action)
+                this._callSubscriber(this._state)
 
         },    
 }
+        
 
-        export const addTableDataActionCreator = () =>{
-                return{
-                type: 'ADD-TABLE-DATA'
-                }
-        }
-
-        export const updateNewPodTextActionCreator = (text) =>{
-                return{
-                type: 'UPDATE-NEW-POD-TEXT',  newText:text 
-                }
         
-       
-        
-        
-}
 window.store=store
 export default store

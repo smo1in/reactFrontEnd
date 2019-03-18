@@ -2,8 +2,7 @@ import React from "react";
 import "./Podstatus.css";
 import "./table/Table.css";
 import PodStatusTable from "./table/Table";
-import {addTableDataActionCreator , updateNewPodTextActionCreator} from "../../redux/store"
-
+import {addTableDataActionCreator , updateNewPodTextActionCreator} from "../../redux/podStatusReducer"
 
 
 
@@ -27,7 +26,7 @@ const Podstatus = (props) =>{
 }
 
   return (
-  <div class="card horizontal">
+  <div className="card horizontal">
       <table  className="striped">
         
         <thead>
@@ -52,7 +51,7 @@ const Podstatus = (props) =>{
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s6">
-                  <textarea id="icon_prefix2" class="materialize-textarea" onChange ={onPodChange} ref={newPodElement} value={props.podStatusData.tableData.newPodElement}></textarea>
+                  <textarea id="icon_prefix2" class="materialize-textarea" onChange ={onPodChange} ref={newPodElement} value={props.podStatusData.newPodElement}></textarea>
                   <label for="icon_prefix2">new PodName</label>
                   <a class="btn-floating pulse teal lighten-2" onClick={addTableData}><i className="material-icons">add</i></a>
                 </div>
@@ -83,7 +82,7 @@ const Podstatus = (props) =>{
     
     
   </div>
-
+ 
   
   )
   
