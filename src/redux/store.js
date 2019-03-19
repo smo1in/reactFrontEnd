@@ -15,9 +15,6 @@ let store={
                                 {podName: 'sym-qa17-qa-chat-glb-1', running: 2, stopped: 3,  overallState: 'active'}
                         ],
                         newPodText: ''
-
-                
-        
                 }
 
         
